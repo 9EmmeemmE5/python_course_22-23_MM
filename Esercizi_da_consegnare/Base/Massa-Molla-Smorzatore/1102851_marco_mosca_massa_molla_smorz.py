@@ -16,11 +16,14 @@ def y_travel_funct():
     y_mass_travel =
     return y_mass_travel
 
+
+def main():
+    
 T_SIM =10 #float(input("Inserire il valore temporale totale del tempo simulazione"))
 tC = 0.01 #float(input("Inserire il valore temporale del singolo campione"))
 n_samples = int(T_SIM/tC)
 
-my_sim_data = np.zeros((n_samples,2))      #sono delle matrici perche si necessita di visualizzare l'andamento nel tempo,
+my_sim_data = np.zeros((n_samples+2,2))      #sono delle matrici perche si necessita di visualizzare l'andamento nel tempo,
 # quindi la matrice deve essere grande n_samples x n°colonne dei valori da memorizzare, quindi la il tempo e la y della molla
 
 print(my_sim_data)
