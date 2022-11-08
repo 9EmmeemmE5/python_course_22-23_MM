@@ -29,5 +29,11 @@ def main():
     print(my_set_from_list) #ogni qualvolta che si deve rimuovere duplicati da un insieme, si usa il costruttore con la lista
     for item in my_set_from_list:
         print(item) #iterando un print degli elementi per l'insieme, si denota che per ogni F5 l'ordine varia per quanto scritto in #L26
+    my_list_from_set = list(my_set_from_list) #operazione di trasformazione in lista
+    my_list_from_set.sort() #sorting della lista
+    print(my_list_from_set) #print della lista
+    print(my_list_from_set[0]) #print del primo elemento della lista
+    print(set("hello")) #print di un insieme formato dagli elementi della stringa "hello", ossia h,l,o,e senza la seconda l
+    print(sorted(set("hello"), reverse=True)) #il sorted trasforma in lista un insieme richiamato con il set, il reverse True ... chiedi al prof
 
 main()
