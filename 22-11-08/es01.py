@@ -23,9 +23,11 @@ def main():
     my_set = {"Adriano", "Marco", "zero"}
     print(my_set)
     print(len(my_set))
-    print(my_set[0])    #non esiste una relazione d'ordine non posso richaimare un dato valore, quindi non posso richiamarlo con l'indice
+    # print(my_set[0])    #non esiste una relazione d'ordine non posso richaimare un dato valore, quindi non posso richiamarlo con l'indice
     my_empty_set = set() #sto chiamando il costruttore che costrusice una collezione non ordinata di elementi unici.
     my_set_from_list = set(["one", "one", "two", "hello"]) #sto costruendo un insieme dalla lista scritta
-    print(my_set_from_list)
+    print(my_set_from_list) #ogni qualvolta che si deve rimuovere duplicati da un insieme, si usa il costruttore con la lista
+    for item in my_set_from_list:
+        print(item) #iterando un print degli elementi per l'insieme, si denota che per ogni F5 l'ordine varia per quanto scritto in #L26
 
 main()
