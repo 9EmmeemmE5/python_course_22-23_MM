@@ -31,4 +31,7 @@ def main():
     my_common_words = my_set1.intersection(my_set2)
     print(f"numero di parole comuni {len(my_common_words)}")
     print(f"le parole in comune sono:\n {(my_common_words)}")
+    my_set1.discard("lorem")
+    print(len(my_common_words))
+
 main()
