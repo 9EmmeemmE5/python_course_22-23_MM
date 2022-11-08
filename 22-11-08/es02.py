@@ -25,8 +25,8 @@ def extract_list_from_string(my_str:str, sep = " ", items_to_be_removed = [".","
 def main():
     my_list1 = extract_list_from_string(load_file_into_string("./22-11-08/word1.txt"))
     print(my_list1)
-    my_set1 = extract_list_from_string(load_file_into_string("./22-11-08/word1.txt"))
-    my_set2 = extract_list_from_string(load_file_into_string("./22-11-08/word2.txt"))
+    my_set1 = set(extract_list_from_string(load_file_into_string("./22-11-08/word1.txt")))
+    my_set2 = set(extract_list_from_string(load_file_into_string("./22-11-08/word2.txt")))
     print(len(my_set1), len(my_set2))
     my_common_words = my_set1.intersection(my_set2)
     print(f"numero di parole comuni {len(my_common_words)}")
