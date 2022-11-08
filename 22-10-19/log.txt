@@ -1,0 +1,38 @@
+
+d:\ONEDRIVE - UNIVPM\DIDATTICA MAGISTRALE\LEZIONI INFORMATICA\LEZIONI\22-10-19>dir
+ Il volume nell'unit… D Š STORAGE
+ Numero di serie del volume: E831-760A
+
+ Directory di d:\ONEDRIVE - UNIVPM\DIDATTICA MAGISTRALE\LEZIONI INFORMATICA\LEZIONI\22-10-19
+
+24/10/2022  10:43    <DIR>          .
+23/10/2022  11:16    <DIR>          ..
+24/10/2022  10:37             1.664 es01.py
+24/10/2022  10:43                 0 log.txt
+24/10/2022  10:42               168 process.bat
+               3 File          1.832 byte
+               2 Directory  1.206.279.024.640 byte disponibili
+
+d:\ONEDRIVE - UNIVPM\DIDATTICA MAGISTRALE\LEZIONI INFORMATICA\LEZIONI\22-10-19>python es01.py 3 4 
+['es01.py', '3', '4']
+La somma di 3 e 4 è pari a :             7.0
+
+d:\ONEDRIVE - UNIVPM\DIDATTICA MAGISTRALE\LEZIONI INFORMATICA\LEZIONI\22-10-19>python es01.py 5 6 
+['es01.py', '5', '6']
+La somma di 5 e 6 è pari a :             11.0
+
+d:\ONEDRIVE - UNIVPM\DIDATTICA MAGISTRALE\LEZIONI INFORMATICA\LEZIONI\22-10-19>python es01.py 9.2 5.0 
+['es01.py', '9.2', '5.0']
+La somma di 9.2 e 5.0 è pari a :             14.2
+
+d:\ONEDRIVE - UNIVPM\DIDATTICA MAGISTRALE\LEZIONI INFORMATICA\LEZIONI\22-10-19>python es01.py -3.2 4.5 "pippo" 
+['es01.py', '-3.2', '4.5', 'pippo']
+numero di argomenti errato
+
+d:\ONEDRIVE - UNIVPM\DIDATTICA MAGISTRALE\LEZIONI INFORMATICA\LEZIONI\22-10-19>python es01.py -9.9 1 "paperino" 
+['es01.py', '-9.9', '1', 'paperino']
+numero di argomenti errato
+
+d:\ONEDRIVE - UNIVPM\DIDATTICA MAGISTRALE\LEZIONI INFORMATICA\LEZIONI\22-10-19>python es01.py -523.989 -684.578 
+['es01.py', '-523.989', '-684.578']
+La somma di -523.989 e -684.578 è pari a :             -1208.567

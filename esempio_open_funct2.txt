@@ -1,0 +1,3 @@
+id;temp;content
+12;45.0;pippo
+13;47.0;hello
