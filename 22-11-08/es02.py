@@ -32,6 +32,12 @@ def main():
     print(f"numero di parole comuni {len(my_common_words)}")
     print(f"le parole in comune sono:\n {(my_common_words)}")
     my_set1.discard("lorem")
+    try:
+        my_set1.remove("neccccccc") #returna un KeyError
+    except KeyError as ex:
+        print(f"non ho trovato l'elelmento: {ex}")
+    except Exception as ex:
+        print("eccezione generica") #ha poco senso inserire un'eccezione generica ma non è errato perche il try ne prende anche più di 1
     print(len(my_common_words))
 
 main()
