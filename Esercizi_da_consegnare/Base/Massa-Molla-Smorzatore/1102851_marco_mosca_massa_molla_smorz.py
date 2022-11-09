@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 def mass_spring_damper(input_params_into_msd_funct):
     """Mass-spring-damper function"""
-    y_mass_travel = [] #inserire la funzione del massa molla smorzatore
+    y_mass_travel = 
     return y_mass_travel
 
 def m_s_d_parameters(mass, damping_ratio, stiffness, force, TIME_INCREMENT, T_SIM):
@@ -28,8 +28,12 @@ def m_s_d_parameters(mass, damping_ratio, stiffness, force, TIME_INCREMENT, T_SI
     #TypeError sui tempi, sulla massa, k, b, in quanto non negativi
     return input_params_into_msd_funct
 
+def input_val():
+    """Function that creates a vector of 6 zeros to be input by user"""
+    values_tobe
 def main():
     """Entrypoint"""
+    input_val=input()
     
     time_list = []
     travel_list = []
@@ -41,16 +45,16 @@ def main():
     plt.show()
 main()
 
-T_SIM =10 #float(input("Inserire il valore temporale totale del tempo simulazione"))
-tC = 0.01 #float(input("Inserire il valore temporale del singolo campione"))
+# T_SIM =10 #float(input("Inserire il valore temporale totale del tempo simulazione"))
+# tC = 0.01 #float(input("Inserire il valore temporale del singolo campione"))
 
 
-my_sim_data = np.zeros((n_samples+2,2))      #sono delle matrici perche si necessita di visualizzare l'andamento nel tempo,
-# quindi la matrice deve essere grande n_samples x n°colonne dei valori da memorizzare, quindi la il tempo e la y della molla
+# my_sim_data = np.zeros((n_samples+2,2))      #sono delle matrici perche si necessita di visualizzare l'andamento nel tempo,
+# # quindi la matrice deve essere grande n_samples x n°colonne dei valori da memorizzare, quindi la il tempo e la y della molla
 
-# print(my_sim_data)
+# # print(my_sim_data)
 
-# my_sim_data[0][0] = 0.0
-# my_sim_data[0][1] = 0.2343  #nel for si cambia l'indice di sinistra perche indica il tempo ciclo
-# #come alternativa è possibile scrivere i valori della simulazione su 2 liste; se si riesce
+# # my_sim_data[0][0] = 0.0
+# # my_sim_data[0][1] = 0.2343  #nel for si cambia l'indice di sinistra perche indica il tempo ciclo
+# # #come alternativa è possibile scrivere i valori della simulazione su 2 liste; se si riesce
 
