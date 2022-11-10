@@ -55,3 +55,4 @@ def main():
         plt.show()
     else:
         print("wrong number of input")
+main()
