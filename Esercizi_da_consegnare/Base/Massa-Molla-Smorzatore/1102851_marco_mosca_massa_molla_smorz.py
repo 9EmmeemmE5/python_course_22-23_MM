@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 def mass_spring_damper(input_params_into_msd_funct, user_values):
     """Mass-spring-damper function"""
-    sim_data=np.zeros((input_params_into_msd_funct[4],2), dtype=np.uint16)
+    sim_data_to_extract=np.zeros((input_params_into_msd_funct[4],2), dtype=np.uint16)
     for i in range (input_params_into_msd_funct[4]):
         time_interval_value=i*input_params_into_msd_funct[4]
         force=user_values[2]*np.cos(input_params_into_msd_funct[4]*time_interval_value)
@@ -19,11 +19,11 @@ def mass_spring_damper(input_params_into_msd_funct, user_values):
             y_h0=0
             y_h1=y_h2
         else:
-            y_h0=sim_data[i][1]
-            y_h1=sim_data[i+1][1]
+            y_h0=sim_data_to_extract[i][1]
+            y_h1=sim_data_to_extract[i+1][1]
         y_h2= input_params_into_msd_funct[0]*y_h1+input_params_into_msd_funct[1]*y_h0+force
         #TODO: codificare inserimento in matrice
-    return sim_data
+    return sim_data_to_extract
 
 def m_s_d_param_vect(user_values):
     """This function returns the mass-spring-damper parameters vactor to be inserted into the algorithm"""
@@ -42,7 +42,6 @@ def user_input_val():
     for i in range (7):      #for di inserimento degli input
         input_values[i]=float(input("inserisci valore (in ordine w_f, A_f, m, k, b, t_c, t_sim)"))
     return input_values
-    return
 
 def main():
     """Entrypoint"""
@@ -56,19 +55,14 @@ def main():
     CYCLE_TIME=user_values[5]
     SIM_TIME=user_values[6]
     #TODO: risolvere chiamate di funzioni
-    # m_s_d_param_vect()
-    # mass_spring_damper(m_s_d_param_vect)
-    # time_list = sim_data[][1]
-    # travel_list = sim_data[][2]
-    #TODO: plottare
-    #! plot
+    funct_input_param = m_s_d_param_vect(user_values)
+    sim_data = mass_spring_damper(funct_input_param)
+    time_list = sim_data[:,[1]]
+    travel_list = sim_data[:,[2]]
+    #* plot
     fig,ax = plt.subplots()
-    # ax.plot(time_list, travel_list)     
+    ax.plot(time_list, travel_list)     
     ax.set(xlabel='time (s)', ylabel='y(t) - Mass travel', title='Mass-Spring-Damper simulation')
     ax.grid()
     plt.show()
 main()
-
-# my_sim_data[0][0] = 0.0
-# my_sim_data[0][1] = 0.2343  #nel for si cambia l'indice di sinistra perche indica il tempo ciclo
-# #come alternativa è possibile scrivere i valori della simulazione su 2 liste; se si riesce
