@@ -24,5 +24,5 @@ def main():
             print(f"{item['name']}{item['surname'].upper()}")
             #NB: se uso la double quote nel recall della chiave va in errore la f string
             #quindi risolvo con la single quote, perché se avessi usato il "\" sarebbe
-            #andato nuovamente in errore pinco pallino cacca rosa
+            #andato nuovamente in errore
 main()
