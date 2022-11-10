@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File - massa molla smorzatore - numpy a lezione 22-11-10",
+            "name": "Python: Current File - massa molla smorzatore - numpy a lezione 22-11-10 - campionamento corretto",
             "type": "python",
             "request": "launch",
             "program": "${file}",
@@ -16,7 +16,24 @@
                 "30",
                 "0.1",
                 "0.001",
-                "10",
+                "500",
+                "0.2",
+                "0.0"
+            ]
+        },
+        {
+            "name": "Python: Current File - massa molla smorzatore - numpy a lezione 22-11-10 - campionamento errato",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "4",
+                "30",
+                "0.1",
+                "0.1",
+                "500",
                 "0.2",
                 "0.0"
             ]
