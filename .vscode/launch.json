@@ -4,15 +4,40 @@
     // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
         {
-            "name": "Python: file corrente",
+            "name": "Python: Current File - massa molla smorzatore - numpy a lezione 22-11-10",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": ["-6.8", "8.2", "-4.5", "2.5", "1", "5", "10", "5",]
+            "args": [
+                "4",
+                "30",
+                "0.1",
+                "0.001",
+                "10",
+                "0.2",
+                "0.0"
+            ]
+        },
+        {
+            "name": "Python: file corrente-zero funzione a lezione",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "-6.8",
+                "8.2",
+                "-4.5",
+                "2.5",
+                "1",
+                "5",
+                "10",
+                "5",
+            ]
         }
     ]
 }
