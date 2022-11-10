@@ -45,7 +45,7 @@ def main():
             x_discrete=np.matmul(a_discrete,x_discrete)
             #con il matmul eseguo il matrix multiply
             #non funziona se metto
-            #x_d1 perche non lo sto richiamando?
+            #x_d1 perche non sto assegnando e rimane tutto uguale
             #x_d perche assume sempre una nuova forma perche quello precedente
             #viene sovrascritto
             data[i,0]=i*t_c #nella prima posizione metto il tempo in cui sto simulando
