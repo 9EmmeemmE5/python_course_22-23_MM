@@ -14,24 +14,25 @@ def main():
         position_t0=float(sys.argv[6])
         speed_t0=float(sys.argv[7])
         n_step=int(t_sim/t_c)
-        #create the A, B matrix and state... 
+        #se eseguo divisione intera restituisce float se divido float
+        #create the A, B matrix and state...
         # #creo lo stato x_2(k) e lo x_1(k) se ho la forzante anche b
         #create the A matrix and state #parte 1 senza forzante
-        A_discrete = np.zeros((2,2))
+        a_discrete = np.zeros((2,2))
         #occorre inserire tra parentesi il comando
         #della dimensione perche si sta scrivendo la tuple
         x_discrete = np.zeros((2,1))
         #tra parentesi la shape di 2 righe e 1 colonna
         #populate A matrix
-        A_discrete[0,0]=1
-        A_discrete[0,1]=t_c
-        A_discrete[1,0]=-t_c*k_spring/mass
-        A_discrete[1,1]=1-t_c*damp_coeff/mass
+        a_discrete[0,0]=1
+        a_discrete[0,1]=t_c
+        a_discrete[1,0]=-t_c*k_spring/mass
+        a_discrete[1,1]=1-t_c*damp_coeff/mass
         #initialize state
         # #creo il vettore dello stato iniziale per definire il valore di innesco
         x_discrete[0,0]=position_t0
         x_discrete[1,0]=speed_t0
-        # x_discrete(k+1)=A_discrete*x_discrete(t)
+        # x_discrete(k+1)=a_discrete*x_discrete(t)
         #crete a matrix which store, for each step, time, pos and speed
         data=np.zeros((n_step,3))
         #storing the initial values to history:
@@ -41,7 +42,7 @@ def main():
         data[0,1]=position_t0 #istante inizizale, posizione iniziale
         data[0,2]=speed_t0    #istante iniziale, velocità iniziale
         for i in range(1,n_step):
-            x_discrete=np.matmul(A_discrete,x_discrete) 
+            x_discrete=np.matmul(a_discrete,x_discrete)
             #con il matmul eseguo il matrix multiply
             #non funziona se metto
             #x_d1 perche non lo sto richiamando?
@@ -50,9 +51,9 @@ def main():
             data[i,0]=i*t_c #nella prima posizione metto il tempo in cui sto simulando
             data[i,1]=x_discrete[0,0] #sto memorizzando la posizione, metto pos_t0
             data[i,2]=x_discrete[1,0] #sto memorizzando la velocità, metto spd_t0
-        plt.plot(data[:,0], data[:,1])
+        plt.plot(data[:,0], data[:,1], data[:,2]) #la seconda serie è il 3° entry
         #con il ":" faccio il broadcasting di tutta la colonna dell'indice che lo segue
-        plt.show()
+        plt.show(block=True)
     else:
         print("wrong number of input")
 main()
