@@ -32,7 +32,10 @@ def m_s_d_param_vect(user_values):
     beta=-(user_values[2]-user_values[4]*user_values[5]+user_values[3]*user_values[5]**2)/user_values[2]
     gamma=(user_values[5]**2)/user_values[2]
     n_samples =int((user_values[6]/user_values[5])+2)
-    input_params_into_msd_funct.append(alfa, beta, gamma, n_samples)
+    input_params_into_msd_funct.append(alfa)
+    input_params_into_msd_funct.append(beta)
+    input_params_into_msd_funct.append(gamma)
+    input_params_into_msd_funct.append(n_samples)
     #TypeError sui tempi, sulla massa, k, b, in quanto non negativi
     return input_params_into_msd_funct
 
@@ -45,18 +48,20 @@ def user_input_val():
 
 def main():
     """Entrypoint"""
-    #TODO: aggiungere controllo delle eccezioni per i valori definiti positivi
     user_values=user_input_val()
     freq_f=user_values[0]
-    amplitude_f=user_values[1]
     mass = user_values[2]
     stiffness=user_values[3]
     damp_ratio=user_values[4]
     CYCLE_TIME=user_values[5]
     SIM_TIME=user_values[6]
+    amplitude_f=user_values[1]
+    print(f"I valori inseriti sono: \n frequenza della forzante {user_values[0]}, \n")
+    #TODO: aggiungere controllo delle eccezioni per i valori definiti positivi
+    
     #TODO: risolvere chiamate di funzioni
     funct_input_param = m_s_d_param_vect(user_values)
-    sim_data = mass_spring_damper(funct_input_param)
+    sim_data = mass_spring_damper(funct_input_param, user_values)
     time_list = sim_data[:,[1]]
     travel_list = sim_data[:,[2]]
     #* plot
