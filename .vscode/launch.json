@@ -5,6 +5,32 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Current File - istogramma prove 5 classi 15 valori a scaletta",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "5",
+                "1",
+                "2",
+                "2",
+                "3",
+                "3",
+                "3",
+                "4",
+                "4",
+                "4",
+                "4",
+                "5",
+                "5",
+                "5",
+                "5",
+                "5"
+            ]
+        },
+        {
             "name": "Python: Current File - massa molla smorzatore - numpy a lezione 22-11-10 - campionamento corretto",
             "type": "python",
             "request": "launch",
