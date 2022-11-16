@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 #import API key
 open_weather_key = '786747fbd17266909639c55958338c21'
-cities=['Roma','Torino','Napoli','Venezia','Bologna','Milano']
+cities=['Montegranaro','Torino','Napoli','Venezia','Bologna','Milano']
 
 #define base and query URL
 url = "https://api.openweathermap.org/data/2.5/weather?"
@@ -93,5 +93,30 @@ plt.scatter(city,humidity, s=40, c="slateblue", edgecolors="black", alpha=.75)
 plt.title(f"City Latitude vs Humidity")
 plt.xlabel("City")
 plt.ylabel("Humidity %")
+plt.grid(b=None,which='major',axis='both')
+plt.show()
+
+#plot forecast 5 days 3h della città di
+data2 ={
+    "temp":[],
+    "date":[]
+}
+
+#define base and query url for forecast
+url = "https://api.openweathermap.org/data/2.5/forecast?"
+query_url=f"{url}appid={open_weather_key}&q={cities[0]}&units=metric"
+
+response=requests.get(query_url).json()
+for item in response["list"]:
+    data2["date"].append(item['dt'])
+    data2["temp"].append(item['main']['temp'])
+
+#plot forecast
+temp = data2['temp']
+dt = pd.to_datetime(data2["date"], unit='s')
+plt.scatter(dt, temp, s=40, c="slateblue", edgecolors="black", alpha=.75)
+plt.title(f"Forecast city temperature {cities[0]}")
+plt.xlabel("Date")
+plt.ylabel("Temp (°C)")
 plt.grid(b=None,which='major',axis='both')
 plt.show()
