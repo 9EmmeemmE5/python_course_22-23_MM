@@ -14,7 +14,7 @@ cities = ['Roma','Torino','Napoli','Venezia','Bologna','Milano']
 
 #define base and query URL
 url = "http://api.openweathermap.org/data/2.5/weather?"
-query_url =f"{url}appid={open_weather_key}&q={cities[0]}"
+query_url =f"{url}appid={open_weather_key}&q={cities[0]}&units=metric"
 #print(query_url)
 
 #get response
@@ -42,7 +42,7 @@ sets = 1
 for item in cities:
     try:
         #redefine query_url and response for each city in the loop
-        query_url = f"{url}appid={open_weather_key}&q={item}"
+        query_url = f"{url}appid={open_weather_key}&q={item}&units=metric"
         response = requests.get(query_url).json()
         #update print statement count and print
         number = number + 1
@@ -69,20 +69,18 @@ print(data)
 city_data_df = pd.DataFrame(data)
 print(data)
 
-city_data_df = pd.DataFrame(data)
-print(data)
-
-
+#plot max temp
 max_temp = city_data_df["Max Temp"]
 city = city_data_df["City"]
+
 #set date
 city_data_df['Date'] = pd.to_datetime(city_data_df['Date'], unit='s')
 date=city_data_df["Date"][0]
 
 #create plot
 plt.scatter(city,max_temp, s=40, c="slateblue", edgecolors="black", alpha=.75)
-plt.title(f"City Latitude vs Temperature({date}")
+plt.title(f"City Latitude vs Temperature({date})")
 plt.xlabel("Latitude")
-plt.ylabel("Max Temp (F)")
+plt.ylabel("Max Temp (°C)")
 plt.grid(b=None,which='major',axis='both')
 plt.show()
