@@ -109,11 +109,13 @@ print(list(set1))
 sampleDict = {"name": "Kelly","age": 25,"salary": 8000,"city": "New york"}
 keys = ["name", "salary"]
 newDict = {}
-newDict["name"]=sampleDict['name']
-newDict["salary"]=sampleDict['salary']
-newDict1={}
 for element in keys:
-    newDict1[element]=sampleDict[element]
+    newDict[element]=sampleDict[element]
+    
+#istruzione concentrata in cui ci sono 2 esecuzioni in 1,
+#andando a ciclare con un for all'interno di una variabile
+newDict1 = {k:sampleDict[k] for k in keys}
+print(newDict1)
 
 #* 6 
 # Delete using the following list of keys ["name", "salary"] 
@@ -122,13 +124,13 @@ for element in keys:
 
 for element in keys:
     sampleDict.pop(element)
-
+    #del sampleDict[element]
 # 7
 # Given the following dictionary:
 inventory = {
     'gold' : 500,
     'pouch' : ['flint', 'twine', 'gemstone'],
-    'backpack' : ['xylophone','dagger', 'bedroll','bread loaf']
+    'backpack' : ['xylophone','dagger','bedroll','bread loaf']
     }
 
 #Try to do the followings:
@@ -136,21 +138,26 @@ inventory = {
 #* a) Add a key to inventory called 'pocket'and set the value 
 # of 'pocket' to be a list consisting of the strings 'seashell', 
 # 'strange berry', and 'lint'.
-inventory['pocket']=["seashell","strange  berry","lint"]
+inventory['pocket']=['seashell','strange berry','lint']
 
 #* b) .sort() the items in the list stored under the 'backpack' key.
-# backpack=[]
-# backpack=inventory.get('backpack')
-# inventory.pop('backpack')
-# backpack.sort()
-# inventory['backpack']=backpack
+#! backpack=[]
+#! backpack=inventory.get('backpack')
+#! inventory.pop('backpack')
+#! backpack.sort()
+#! inventory['backpack']=backpack
 inventory['backpack']=sorted(inventory['backpack'])
+#inventory['backpack'].sort() fa la stessa cosa ma in questo caso uso una funzione
+#prorpia del dizionario
 
 #* c) Then .remove('dagger') from the list of items stored under the 'backpack' key.
-backpack=inventory.get('backpack')
-inventory.pop('backpack')
-backpack.pop(2)
-inventory['backpack']=backpack
+#FABBRO ZOZZO MODE:
+# backpack=inventory.get('backpack')
+# inventory.pop('backpack')
+# backpack.pop(2)
+# inventory['backpack']=backpack
+# corretto:
+inventory['backpack'].remove('dagger')
 
 #* d) Add 50 to the number stored under the 'gold' key.
 inventory['gold']=inventory['gold']+50
@@ -159,4 +166,5 @@ inventory['gold']=inventory['gold']+50
 print(inventory)
 
 #f) Print in reverse order all values of dictionary with 'backpack' keys
-print(inventory.values(), reverse=True)
+inventory['backpack'].sort(reverse=True)
+print(inventory)
