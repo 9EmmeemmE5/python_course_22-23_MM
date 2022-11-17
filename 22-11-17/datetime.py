@@ -8,7 +8,7 @@ class Date(object):
         # self._data = date       
         # quando creo oggetto Date vuoto, richiama il 01-01-1970, 
         # mentre se inserisco la data odierna ad esempio, 
-        # allora sto facendo overwriting, ossia sovrascrivo 
+        # allora sto facendo override, ossia sovrascrivo 
         # con il vlaore che ho inserito tra le parentese dell'oggetto
         # Date
     def get_date(self):
