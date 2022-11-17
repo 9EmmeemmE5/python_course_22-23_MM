@@ -43,5 +43,6 @@ for a in (Dog("Rover"), Cat("Fluffy"), Cat("Lucky"), Dog("Scout")):
     # se una delle 2 show affection fosse stata assente
     # o la commentassimo ora, sarebbe andat in errore
     # perche uno dei 2 tra dog e cat non avrebbe una show_affection.
-    # Inoltre qui stiamo creando un'istanza che non rimane in memoria(?)
+    # Inoltre qui stiamo creando un'istanza che non rimane in memoria
+    # perché è strettamente circoscritta al for, nasce, si sviluppa e muore lì
     a.show_affection()
