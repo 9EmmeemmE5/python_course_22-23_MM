@@ -26,15 +26,16 @@ def bin_freq(my_list, bin_extr):
     bin_extr.pop(0)
     for element in my_list:
         bin_list = []
-        if element <= bin_extr[0]:
-            bin_list.append(element)                                             #! appendere sottoliste per poi printarne il len
-            my_list.pop(0)
-        while element > bin_extr[0]:
-            bin_list.append(element)                                             #! appendere sottoliste per poi printarne il len
-            my_list.pop(0)
-            bin_extr.pop(0)
-        else:
-            sub_ints_freq.append(len(bin_list))
+        for item in bin_extr:
+            if element <= item:
+                bin_list.append(element)                                             #! appendere sottoliste per poi printarne il len
+                my_list.pop(0)
+            if element > item:
+                bin_list.append(element)                                             #! appendere sottoliste per poi printarne il len
+                my_list.pop(0)
+                bin_extr.pop(0)
+            else:
+                sub_ints_freq.append(len(bin_list))
     print(sub_ints_freq)
     print(f"Le frequenze delle classi sono, dalla prima all'ultima, {sub_ints_freq}") #! da correggere e mettere len delle sottoliste
 
