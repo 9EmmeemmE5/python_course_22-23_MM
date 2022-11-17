@@ -21,7 +21,7 @@ class Time(Date):
 
     def get_time(self):
         self._time = "15:30:00"
-        return self._data
+        return self._time
 
 tm = Time() 
 # creo un oggetto di tipo tempo, un'istanza di Time, richiamando il costruttore:
