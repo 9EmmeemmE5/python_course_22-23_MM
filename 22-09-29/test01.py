@@ -1,3 +1,4 @@
+"""Questa è la docstring del titolo (causa linting)"""
 #Questo è un commento
 """
 doc string: ci dice come utilizzare qualcosa, funge da documentazione e si formatta
