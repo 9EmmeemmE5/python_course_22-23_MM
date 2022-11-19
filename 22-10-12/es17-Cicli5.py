@@ -1,15 +1,18 @@
-##
-# CICLI 3
-##
+"""Cicli 5"""
 
-#TODO: chiedere all'utente un numero > = 0; uscire dal ciclo se numero == -1 o comunque se <=0; calcolare min, max, media
+# Chiedere all'utente un numero > = 0; uscire dal ciclo se numero == -1
+# o comunque se <=0; calcolare min, max, media
 
 #* CALCOLO DELLA MEDIA
 
 my_sum = 0 #codifica la somma
 num_count = 0 #codifica quanti numeri ho inserito
-min_val = None #codifica il minimo: potrebbe potenzialmente essere codificato come infinito, mentre invece 0 e' errato perche non so quanto puo' valere il minimo, quindi partendo da
-max_val = None #una conoscenza nulla posso impostare come minimo il primo valore inserito; possiamo inserire il "None" ossia un valore speciale che significa letteralemente"non lo so"
+min_val = None 
+#codifica il minimo: potrebbe potenzialmente essere codificato come infinito,
+# mentre invece 0 e' errato perche non so quanto puo' valere il minimo, quindi partendo da
+max_val = None 
+# una conoscenza nulla posso impostare come minimo il primo valore inserito;
+# possiamo inserire il "None" ossia un valore speciale che significa letteralemente"non lo so"
 
 while True:
     my_num = float(input("Inserisci un numero > 0 ..."))

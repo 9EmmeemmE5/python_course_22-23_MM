@@ -1,7 +1,4 @@
-##
-# CICLI 02
-##
-
+"""Cicli 2"""
 # TODO: calcolare la somma dei primi N numeri...
 # TODO: N specificato dall'utente...
 
@@ -14,5 +11,6 @@ while iter_count<=n_value:
     my_sum_value += iter_count
     iter_count+=1
     print(f"la somma dei primi {n_value} numeri e' {my_sum_value}")
-    #if(iter_count>n_value):    #!qui non serve l'if perche non ho un while True, in quanto ho un if intrinseco nel while
+    #if(iter_count>n_value):
+    # qui non serve l'if perche non ho un while True, in quanto ho un if intrinseco nel while
         #break
