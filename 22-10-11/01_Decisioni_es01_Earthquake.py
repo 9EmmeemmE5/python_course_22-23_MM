@@ -25,7 +25,7 @@ else:
 # * Nell'ultima si mette else, perche se tutte le altre sono state escluse: avrei potuto avere sia high damage che ultra high damage se ci fosse stato un elif.
 
 # * Si sta codificando una sorta di Switch-case: una sorta di interruttore che, sulla base di una variabile, considera diverse casistiche basate su un valore,
-# * del tipo o caso 1, o caso 2, o caso 3 o caso 4, e, se nessuna delle condizioni è verificata si va a considerare il caso di default da valutare.
+# * del tipo o caso 1, o caso 2, o caso 3 o caso 4, e, se nessuna delle condizioni e' verificata si va a considerare il caso di default da valutare.
 
 # * switch(var){
 # *     case 0
@@ -34,7 +34,7 @@ else:
 # *     default case
 # * }
 
-Re/factor: piuttosto che scrivere il codice come appena fatto sopra, fuori dal commento multi/line, è possibile impostare delle soglie o Threshold, come 
+Re/factor: piuttosto che scrivere il codice come appena fatto sopra, fuori dal commento multi/line, e' possibile impostare delle soglie o Threshold, come 
 scritto sotto
 """
 
@@ -57,10 +57,10 @@ else:
     print(f"Ultra high damage; we are above the {THRESH_HI_DMG} magnitude")
 """
 # * A riprova della scelta fatta codificado con l'elif, se si esegue con debug inserendo un breakpoint alla prima riga dell'if-block, inserendo un valore,
-# * il debugger chiede di proseguire con le istruzioni finche non si verifica la condizione che si è scritta, inoltre, se fosse stata codificata come una serie
+# * il debugger chiede di proseguire con le istruzioni finche non si verifica la condizione che si e' scritta, inoltre, se fosse stata codificata come una serie
 # * di if e fosse stato inserito un valore di magnitudo pari o maggiore di 8.1, allora sarebbe stato printato ogni messaggio impostato per ogni condizione
 
-# * Nel caso si volesse scrivere un range come in matematica, in questo caso della prima soglia tra 4.5 e 5.99, in python è possibile scrivere anche
+# * Nel caso si volesse scrivere un range come in matematica, in questo caso della prima soglia tra 4.5 e 5.99, in python e' possibile scrivere anche
 # * 4.5 <= magnitude < 5.99 ; alternativamente posso usare l'AND:
 # * magnitude >= THRESH_NO_DMG 
 # ! AND

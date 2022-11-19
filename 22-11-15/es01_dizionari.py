@@ -10,7 +10,7 @@ my_dict2={} #oppure con dict()
 for i in range(1,11):
     my_dict2[i] = i**2
     print("%i ----- %d " % (i, my_dict2[i]))
-#%i e %d sono dei placeholder ed implica che il valore è un int ed un decimale(?)
+#%i e %d sono dei placeholder ed implica che il valore e' un int ed un decimale(?)
 
 #* script che rimuove la tuple con chiave "c" da un dizinario, per poi stampare
 #* in ordine le chiavi del dizionario con apposito sort, stampando poi anche il type

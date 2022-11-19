@@ -4,8 +4,8 @@ my_list1 contiene valori da 0 a 10
 my_list2 contiene valori che sono il quadrato degli item di my_list1
 """
 
-# from matplotlib import pyplot           #importazione del modulo pyplot dalla libreria matplotlib: esso è il modulo che ci permette di plottare in python
-import matplotlib.pyplot as plt           #alternativa con rinominazione "as" è l'alias per creare un nuovo nome per facilitare il richiamo dentro l'IDE
+# from matplotlib import pyplot           #importazione del modulo pyplot dalla libreria matplotlib: esso e' il modulo che ci permette di plottare in python
+import matplotlib.pyplot as plt           #alternativa con rinominazione "as" e' l'alias per creare un nuovo nome per facilitare il richiamo dentro l'IDE
 
 def main():
     """entrypoint"""

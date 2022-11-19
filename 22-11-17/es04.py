@@ -30,7 +30,7 @@ d = Dog("Roger")
 c = Cat("Fluffy")
 #creo un istanza Dog che eredita dalla classe Animal l'attributo name con il
 # self name; se digito d. e apro lo snippet a tendina delle possibili scelte
-# ritrovo l'eat della classe Animal che trasferisce per eredita a d perché
+# ritrovo l'eat della classe Animal che trasferisce per eredita a d perche
 # facente parte della classe Dog che eredita dalla classe Animal
 
 d.fetch("paper") #richiama il fetch di dog ma attribuisce un nome dato tra parentesi
@@ -44,5 +44,5 @@ for a in (Dog("Rover"), Cat("Fluffy"), Cat("Lucky"), Dog("Scout")):
     # o la commentassimo ora, sarebbe andat in errore
     # perche uno dei 2 tra dog e cat non avrebbe una show_affection.
     # Inoltre qui stiamo creando un'istanza che non rimane in memoria
-    # perché è strettamente circoscritta al for, nasce, si sviluppa e muore lì
+    # perche e' strettamente circoscritta al for, nasce, si sviluppa e muore li'
     a.show_affection()

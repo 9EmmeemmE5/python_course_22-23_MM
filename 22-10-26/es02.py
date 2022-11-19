@@ -9,7 +9,7 @@ def create_list_of_words(my_text: str, uniform_case = False):       #definisco l
     if uniform_case:                                                #CS if dove dico che 
         my_copy_text = my_text.lower()                                   #trasformo il my_text in lowercase
     #rimuovere la punteggiatura
-    my_text.replace(",","").replace(".","")                         #replacing#1: definisco l'elemento "," e lo sostituisco con lo spazio " "? no, va modellato come assente sennò viene doppio spazio,a cui aggiungo un altro replace dove tolgo il punto
+    my_text.replace(",","").replace(".","")                         #replacing#1: definisco l'elemento "," e lo sostituisco con lo spazio " "? no, va modellato come assente senno' viene doppio spazio,a cui aggiungo un altro replace dove tolgo il punto
     #alternativa a quello sopra: rimpiazzo
     my_items_tobe_replaced = [",",".",";","-","!"]
     for item in my_items_tobe_replaced:

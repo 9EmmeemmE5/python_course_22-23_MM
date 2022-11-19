@@ -10,5 +10,5 @@ for i in range(0, n_row):
     for j in range(0, n_cols):
         print(f"A[{i}][{j}]")
 
-#il ciclo for interno è molto più veloce di quello esterno; quest'ultimo avanza solo quando quello interno è stato completato
+#il ciclo for interno e' molto più veloce di quello esterno; quest'ultimo avanza solo quando quello interno e' stato completato
 #con due cicli for devo per forza usare indici diversi, in questo caso i, j 

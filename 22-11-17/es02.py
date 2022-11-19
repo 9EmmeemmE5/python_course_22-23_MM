@@ -18,4 +18,4 @@ print("Expected: 3")
 print("%.2f" % register1.getTotal())
 print("Expected: 5.40")
 
-#i pattern sono già dei codici che sono scritti secondo una determinata struttura
+#i pattern sono gia' dei codici che sono scritti secondo una determinata struttura

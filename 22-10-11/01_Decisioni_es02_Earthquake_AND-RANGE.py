@@ -25,16 +25,16 @@ else:
     print("Ultra high damage")
 """
 #! il codice comincia a divenire complesso, quindi occorre orre particolare attenzione al codice e alle relative soglie, in quanto, per quanto intuitivo
-#! può indurre in errore
+#! puo' indurre in errore
 
-#* non esistono limiti agli AND: A and B and C, che è vera se sono tutte e 3 vere, mentre nel caso in cui ci sia anche solo 1 falso, allora risulta essere 
-#* falsa, così come se lo sono tutti e 3
+#* non esistono limiti agli AND: A and B and C, che e' vera se sono tutte e 3 vere, mentre nel caso in cui ci sia anche solo 1 falso, allora risulta essere 
+#* falsa, cosi' come se lo sono tutti e 3
 
-#* L'operatore NOT inverte tra vero e falso, mentre il =! è l'operatore di diseguaglianza, inoltre fare attenzione alla priorità con le parentesi ()
+#* L'operatore NOT inverte tra vero e falso, mentre il =! e' l'operatore di diseguaglianza, inoltre fare attenzione alla priorita' con le parentesi ()
 #* L'operatore OR
 # TODO: aggiungere la parte teorica dell'operatore OR
 
-Le condizioni vengono prese in considerazione da sinistra a destra e, nel caso dell'and, se anche una soltanto non è verificata, il circuito di valutazione
+Le condizioni vengono prese in considerazione da sinistra a destra e, nel caso dell'and, se anche una soltanto non e' verificata, il circuito di valutazione
 si stoppa, quindi si va ad effettuare una valutazione in corto-circuito laddove possivile, ossia si impone come condizione di valutazione, ad esempio un
-falso e, nel caso sia verificato all'inizio, allora stoppo già sul nascere il circuito di valutazione.
+falso e, nel caso sia verificato all'inizio, allora stoppo gia' sul nascere il circuito di valutazione.
 """

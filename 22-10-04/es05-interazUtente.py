@@ -8,7 +8,7 @@ print(type(my_num))
 # ossia non posso stampare la riga 7 prima che venga inserito da parte dello user un numero
 # se si inserirre un numero float verrebbe restituita la classe stringa dal comando print
 # a meno che non venga inserito a monte di my_num il comando float()
-# infine, se si inserisce "pippo" esce fuori un'eccezione TypeError dato che si è inserita
-# una stringa in input che non è convertibile in numero: a tal proposito 
+# infine, se si inserisce "pippo" esce fuori un'eccezione TypeError dato che si e' inserita
+# una stringa in input che non e' convertibile in numero: a tal proposito 
 # occorre gestire le eccezioni, altrimenti il programma smette di funzionare,
-# quindi va circoscritta la modalità con cui agisce 
+# quindi va circoscritta la modalita' con cui agisce 

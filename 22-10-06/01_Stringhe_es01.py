@@ -23,19 +23,19 @@ my_str_3 = my_str_2.replace("bla","", 1)
 
 """
 con il comando replace si riesce a sostituire il contenuto vecchio di una stringa esistente con il contenuto che viene specificato come "new" nel comando,
-opzionalmente si può aggiungere un counter, il quale indica quante occorrenze, a partire dalla prima, devono essere sostituite
+opzionalmente si puo' aggiungere un counter, il quale indica quante occorrenze, a partire dalla prima, devono essere sostituite
 """
 
-#print("ciao:"il mio nome è Marco") #è un errore perche si sta scrivendo una stringa con le double quotes andando a spezzare la stringa per via del simbolo "
-print("ciao:\"il mio nome è Marco\"") #stringa corretta per via dell'inserimento della sequenza di escape \"
+#print("ciao:"il mio nome e' Marco") #e' un errore perche si sta scrivendo una stringa con le double quotes andando a spezzare la stringa per via del simbolo "
+print("ciao:\"il mio nome e' Marco\"") #stringa corretta per via dell'inserimento della sequenza di escape \"
 
 """
-NB: se si inserisce solo un backslash si può incorrere in errore perché non si va a stampare il " fintanto che non viene inserito una sequenza completa \"
+NB: se si inserisce solo un backslash si puo' incorrere in errore perche non si va a stampare il " fintanto che non viene inserito una sequenza completa \"
 NB2: simboli occupati da python #\"
 """
 
-print("Adriano\nMancini\nFondamenti\ndi\nInformatica") #\n è il new line quindi va a capo
-print("Adriano\tMancini\tFondamenti\tdi\tInformatica") #\t è la tabulazione ossia coincide con una pressione del tasto Tab
+print("Adriano\nMancini\nFondamenti\ndi\nInformatica") #\n e' il new line quindi va a capo
+print("Adriano\tMancini\tFondamenti\tdi\tInformatica") #\t e' la tabulazione ossia coincide con una pressione del tasto Tab
 print("Adriano\rMancini\rFondamenti\rdi\rInformatica") #\r restituisce solo l'ultima parola della stringa
 
 
@@ -46,7 +46,7 @@ print(my_float_num2) #stampa i float allineati tutti a sinistra, poco desiderabi
 #print("%.2f" , my_float_num) #stampa i float allineati tutti a sinistra ma con 2 soli decimali, ancora poco desiderabile in terimini di formattazione
 
 """
-NB: non i spuò inserire la virgola quando si formatta, in quanto può essere interpretata come un elemento della formattazione, 
+NB: non i spuo' inserire la virgola quando si formatta, in quanto puo' essere interpretata come un elemento della formattazione, 
 piuttosto che un separatore dei campi della variabile
 """
 
@@ -55,7 +55,7 @@ print("%.2f" % my_float_num2)
 print("%10.2f" % my_float_num) #stampa destinando 10 slot ai caratteri e 2 ai decimali del float 1
 print("%10.2f" % my_float_num2) #stampa destinando 10 slot ai caratteri e 2 ai decimali del float 2
 print("%10.2f %10.2f" % (my_float_num , my_float_num2)) # tuple 
-print("%010.2f" % my_float_num2) #stampa facendo uno zero filling di una disponibilità di 10 caratteri
+print("%010.2f" % my_float_num2) #stampa facendo uno zero filling di una disponibilita' di 10 caratteri
 
 """
 usare la formattazione con il comando %xxf, con x i relativi parametri desidedrati, si riesce a creare una formattazione che assume un senso se si 
@@ -80,5 +80,5 @@ print(my_list_of_values [-1]) #restituisce 1.5 ma con lettura da destra
 print(type(my_list_of_values[len(my_list_of_values)-1])) #restituisce il tipo dell'elemento corrispondente a 1.5 con la restituzione data dall'indice len-1
 print(type(float(my_list_of_values[len(my_list_of_values)-1]))) #restituisce il float dell'elemento... in modo da convertirlo da str a float
 
-print(f"il mio primo numero è: {my_float_num}; il mio secondo numero è: {my_float_num2}")  #f.string, ossia stringa formattata
-print(f"il mio primo numero è: {my_float_num*2:10.2f}; il mio secondo numero è: {my_float_num2*5:10.2f}")  #f.string, dove si specifica come formattare la variabile singolarmente
+print(f"il mio primo numero e': {my_float_num}; il mio secondo numero e': {my_float_num2}")  #f.string, ossia stringa formattata
+print(f"il mio primo numero e': {my_float_num*2:10.2f}; il mio secondo numero e': {my_float_num2*5:10.2f}")  #f.string, dove si specifica come formattare la variabile singolarmente

@@ -96,7 +96,7 @@ plt.ylabel("Humidity %")
 plt.grid(b=None,which='major',axis='both')
 plt.show()
 
-#plot forecast 5 days 3h della città di
+#plot forecast 5 days 3h della citta' di
 data2 ={
     "temp":[],
     "date":[]

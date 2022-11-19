@@ -1,6 +1,6 @@
 """Class and methods 4: datetime"""
 class Date(object):
-    #object può essere omesso, ma ci permette di richiamare il self
+    #object puo' essere omesso, ma ci permette di richiamare il self
     def __init__(self):
         self._data = "01-01-1970"
     

@@ -37,7 +37,7 @@ def main():
     except KeyError as ex:
         print(f"non ho trovato l'elelmento: {ex}")
     except Exception as ex:
-        print("eccezione generica") #ha poco senso inserire un'eccezione generica ma non è errato perche il try ne prende anche più di 1
+        print("eccezione generica") #ha poco senso inserire un'eccezione generica ma non e' errato perche il try ne prende anche più di 1
     print(len(my_common_words))
 
 main()

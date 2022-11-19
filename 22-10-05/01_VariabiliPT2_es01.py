@@ -13,6 +13,6 @@ print(my_abs_value) ##
 print(abs(int(input("inserisci un numero")))) # posso scrivere il codice scritto in precedenza con 4 righe in un unica riga
 
 """
-per testare la funzione abs occorre darle in pasto casi borderline, come un positivo, negativo, zero e qualcosa che non è un 
+per testare la funzione abs occorre darle in pasto casi borderline, come un positivo, negativo, zero e qualcosa che non e' un 
 numero per vedere se si genera un'eccezione
 """

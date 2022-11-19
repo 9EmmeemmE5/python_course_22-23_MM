@@ -22,7 +22,7 @@ my_list_of_values.insert(3,-100)                                    #come sopra 
 #TODO: Rimuovere valore dalla lista... senza la gestione delle eccezioni...
 
 item_to_remove = 1000                                               #variabilizzando l'elemento da rimuovere
-if(item_to_remove in my_list_of_values):                            #CS if che dice che se è presente, allora rimuovi la variabile item_to_remove,
+if(item_to_remove in my_list_of_values):                            #CS if che dice che se e' presente, allora rimuovi la variabile item_to_remove,
     my_list_of_values.remove(item_to_remove)                         
 else:                                                                         #altrimenti
     print(f"l'elemento {item_to_remove} non presente in {my_list_of_values}") #printa la f string qui a sinistra

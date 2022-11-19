@@ -14,7 +14,7 @@ def main():
             a_value = 5 / 0 #inserisco un'operazione errata
             print(a_value)  #printo la variabile
         finally:
-            print("sono nella clausola finally") #NB: può accadere che in caso di eccezioni
+            print("sono nella clausola finally") #NB: puo' accadere che in caso di eccezioni
             my_file.close()                      #    le scritture non vengano finalizzate
     except OSError as ex:   #ho inserito l'OSError per via dello snippet della doc di open
         print(f"Ahi, Ahi, errore nella gestione del file.. {ex}")

@@ -11,14 +11,14 @@ def calculate_power(list_of_values, power):
     
     #for each version
     for item in list_of_values:
-        list_out_of_values.append(item**power)      #ad ogni elemento aggiungo un nuovo elemento che è pari alla potenza per l'esponnente power precedentemente definito
+        list_out_of_values.append(item**power)      #ad ogni elemento aggiungo un nuovo elemento che e' pari alla potenza per l'esponnente power precedentemente definito
     return list_out_of_values
 
 def save_list_to_file(list_of_values, file_name):
     """This function dumps a list to a file"""
     my_file = open(file_name,"w")
     for item in list_of_values:
-        my_file.write(str(item)+'\n')                    #il cast a stringaè una misura ridondante di sicurezza #! aggiungere sempre lo +'\n'
+        my_file.write(str(item)+'\n')                    #il cast a stringae' una misura ridondante di sicurezza #! aggiungere sempre lo +'\n'
         my_file.write(f"{item}\n")                       #molto più pulito il write se si fa con la f.string
     my_file.close()
 

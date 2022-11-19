@@ -54,7 +54,7 @@ def main():
         coeff_3 = float(sys.argv[6]) #quella nominale, quella dell'errore intervallo ecc., andando a ad aggiungere con copia+incolla della sezione nelle {} cambiando il nome
         x_value = find_zero(a_value, b_value, coeff_0, coeff_1, coeff_2, coeff_3)   #se passiamo i controlli iniziali, allora ricaviamo lo zero della funzione
         if (x_value != None):
-            print(f"Lo zero è {x_value}")
+            print(f"Lo zero e' {x_value}")
         else:
             print("Zero non trovato")   #se non ricava lo zero forse siamo troppo stringenti con la soglia
     else:

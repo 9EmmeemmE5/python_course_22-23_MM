@@ -18,7 +18,7 @@ def main():
                 # my_list_of_values.append(float(my_file.readline().rstrip())) #genera un type error
                 my_list_of_values.append(float(my_line.readline().rstrip()))
             my_file.close()
-            break #ha senso mettere il break qui perché se lo mettessi sotto al print dell'eccezine non permetto il successivo inserimento, dato che spengo il while true prima
-        except Exception as ex: #Exception è l'eccezione più generale possiblie, quindi ha una forte elasticità di utilizzo, ma allo stesso tempo è tutto e niente(vedi diagramma gerarchico delle eccezioni sulle slide)
+            break #ha senso mettere il break qui perche se lo mettessi sotto al print dell'eccezine non permetto il successivo inserimento, dato che spengo il while true prima
+        except Exception as ex: #Exception e' l'eccezione più generale possiblie, quindi ha una forte elasticita' di utilizzo, ma allo stesso tempo e' tutto e niente(vedi diagramma gerarchico delle eccezioni sulle slide)
             print(f"Ahi Ahi....{ex}")   #se esiste fa qualcosa, se non esiste ci restituisce un errore
 main() 

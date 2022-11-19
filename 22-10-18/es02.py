@@ -22,6 +22,6 @@ def main():
     print(adder(x))
 main()
 """
-il sys.argv è la lista di comandi mandati al nostro script, dove in sys.argv[0], 0 è il nome del nostro script; questo implica che si possono mandare dei comandi in ingrersso
+il sys.argv e' la lista di comandi mandati al nostro script, dove in sys.argv[0], 0 e' il nome del nostro script; questo implica che si possono mandare dei comandi in ingrersso
 al nostro script come se fosse una vera e propria lista di comandi
 """

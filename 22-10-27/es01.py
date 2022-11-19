@@ -26,6 +26,6 @@ plt.show()
 print(my_matrix[0][0])
 print(my_matrix_rgb[0][0][2])   
 
-#la tabella è una rappresentazione di dati come str o list, ma nella tabella i dati non devono essere sempre e per forza gli stessi
+#la tabella e' una rappresentazione di dati come str o list, ma nella tabella i dati non devono essere sempre e per forza gli stessi
 #una tabella presenta un dato di tipo non omogeneo, come ad esempio la ista, dove posso inserire un int, un bool, una str ecc, quindi non presenta 
 #sempre la stessa tipologia di dato, come per una matrice

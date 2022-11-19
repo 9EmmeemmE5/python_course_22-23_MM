@@ -11,9 +11,9 @@ while True:
 print(my_number)
 
 """
-ci consente di richiedere di far qualcosa fintanto che non si è soddisfatti di una certa condizione, facendoo con un while true, mentre con una variabile
-il discorso è differente rispetto al precedente, in quanto si utilizza una variabile sentinella che flagga le incongruenze: in questo caso si imposta la sentinel come True, quindi
-per uscire dal while, ossia per andare in break, occorre invalidare la condizione my_flag che è vera e quindi fa girare il while, andando ad impostare un if my_number > 0, allora
+ci consente di richiedere di far qualcosa fintanto che non si e' soddisfatti di una certa condizione, facendoo con un while true, mentre con una variabile
+il discorso e' differente rispetto al precedente, in quanto si utilizza una variabile sentinella che flagga le incongruenze: in questo caso si imposta la sentinel come True, quindi
+per uscire dal while, ossia per andare in break, occorre invalidare la condizione my_flag che e' vera e quindi fa girare il while, andando ad impostare un if my_number > 0, allora
 my_flag passa da True a False e quindi ho il break del loop
 """
 my_flag = True #variabile sentinella

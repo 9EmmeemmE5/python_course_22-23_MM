@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 def main():
     """Entrypoint for our sim"""
-    if len(sys.argv)==8:    #(8 perche lo 0 è il nome del file per il sys.argv)
+    if len(sys.argv)==8:    #(8 perche lo 0 e' il nome del file per il sys.argv)
         mass = float(sys.argv[1])
         k_spring = float(sys.argv[2])
         damp_coeff = float(sys.argv[3])
@@ -40,7 +40,7 @@ def main():
         #quello successivo a quello iniziale
         data[0,0]=0.0   #istante iniziale, tempo iniziale
         data[0,1]=position_t0 #istante inizizale, posizione iniziale
-        data[0,2]=speed_t0    #istante iniziale, velocità iniziale
+        data[0,2]=speed_t0    #istante iniziale, velocita' iniziale
         for i in range(1,n_step):
             x_discrete=np.matmul(a_discrete,x_discrete)
             #con il matmul eseguo il matrix multiply
@@ -50,8 +50,8 @@ def main():
             #viene sovrascritto
             data[i,0]=i*t_c #nella prima posizione metto il tempo in cui sto simulando
             data[i,1]=x_discrete[0,0] #sto memorizzando la posizione, metto pos_t0
-            data[i,2]=x_discrete[1,0] #sto memorizzando la velocità, metto spd_t0
-        plt.plot(data[:,0], data[:,1], data[:,2]) #la seconda serie è il 3° entry
+            data[i,2]=x_discrete[1,0] #sto memorizzando la velocita', metto spd_t0
+        plt.plot(data[:,0], data[:,1], data[:,2]) #la seconda serie e' il 3° entry
         #con il ":" faccio il broadcasting di tutta la colonna dell'indice che lo segue
         plt.show(block=True)
     else:

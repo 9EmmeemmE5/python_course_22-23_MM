@@ -1,7 +1,7 @@
 """Esercizio sulla somma ricorsiva delle variabili"""
 my_num1 = 3
 # imposto la variabile pari a 3 int
-print("il mio numero è", my_num1)
+print("il mio numero e'", my_num1)
 # eseguo il print della variabile
 my_num2 = 4.0
 # creo la variabile 2 come float

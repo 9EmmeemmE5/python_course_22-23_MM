@@ -30,7 +30,7 @@ print(my_string[9])
 print(my_string[10])
 print(my_string[len(my_string)-1])
 
-#* che nella versione for è
+#* che nella versione for e'
 
 for i in range(len(my_string)):
     print(my_string[i])
@@ -47,26 +47,26 @@ for i in range(len(my_string)-1,-1,-1):             #imposto un for che va in er
 #TODO: stampare dall'ultimo al primo usando indici negativi
 
 for i in range(-1,-len(my_string)-1,-1):            #parto da -1, arrivo a -len(my_str)-1 perche viene escluso lo STOP, con step negativo di -1
-    print(f"indice {i} valore = {my_string[i]}")    #Se fosse stato {my_string[-i]}, sarebe andato da 1 al finale, ma avrebbe continnuato perché sarebbe andato a len(my_string)+1
+    print(f"indice {i} valore = {my_string[i]}")    #Se fosse stato {my_string[-i]}, sarebe andato da 1 al finale, ma avrebbe continnuato perche sarebbe andato a len(my_string)+1
 
 #! Inserendo il -1 forzo il ciclo a partire dall'ultimo indice, altrimenti lo avrebbe escluso con un eccezione "Index_out_of_range" se fosse stato range(-len(my_string)-1,-1,-1)
 
-my_list_of_value = ["ciao", "mondo", 1, 2, 3.0, True, ["pippo", "pluto"]]   #La tuple è scritta con le (,) ed il separatore è la virgola , mentre, se le parentesi sono [] ho una lista
+my_list_of_value = ["ciao", "mondo", 1, 2, 3.0, True, ["pippo", "pluto"]]   #La tuple e' scritta con le (,) ed il separatore e' la virgola , mentre, se le parentesi sono [] ho una lista
 
 """
 come per le liste e la tuple si accede allo stesso modo con lo stesso metodo, ossia il len(...)-1, -1 per l'elemento finale;
-quello che è particolare in python è che dentro una lista posso mischiare diversi tipi, come int, float, str, boole, ma anche una lista stessa (sub-lista).
+quello che e' particolare in python e' che dentro una lista posso mischiare diversi tipi, come int, float, str, boole, ma anche una lista stessa (sub-lista).
 Se volessi stampare gli oggetti o volessi iterare su questo contenitore, posso farlo come per i contenitori visti in precedenza
 """
 for item in my_list_of_value:
     print(item)
 
 #sopra abbiamo fatto un for per una lista, qui per una stringa, ma aanche sopra abbiamo fatto un "range", quindi 
-#! un for è applicabile ad una qualsiasi collezione iterabile
+#! un for e' applicabile ad una qualsiasi collezione iterabile
 
-print(my_list_of_value[6][1]) #ho stampato esattamente pluto, perche la prima [] individua l'elemento 7 (parto dallo 0) della lista, che è una lista, poi la 2° [] prende il 2°el.
+print(my_list_of_value[6][1]) #ho stampato esattamente pluto, perche la prima [] individua l'elemento 7 (parto dallo 0) della lista, che e' una lista, poi la 2° [] prende il 2°el.
 
-my_identity = [[1,0],[0,1]] #[1,0,0,1] è la matrice identità scritta in notazione informatica 2x2, ma posso modellarla andando ad inserire 2 liste, una per ogni riga
+my_identity = [[1,0],[0,1]] #[1,0,0,1] e' la matrice identita' scritta in notazione informatica 2x2, ma posso modellarla andando ad inserire 2 liste, una per ogni riga
 
 #* gli oggetti che sono collezione sono iterabili come quanto visto in precedenza con il ciclo for, quindi ogni contenitore (liste, tuple, stringhe, risultato del range...)
 

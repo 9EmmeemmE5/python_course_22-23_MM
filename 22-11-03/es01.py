@@ -1,7 +1,7 @@
 ##
 # EXCEPTION HANDLIG
 ##
-#exception handling: occorre gestire le eccezioni; si può volontariamente sollevare
+#exception handling: occorre gestire le eccezioni; si puo' volontariamente sollevare
 #un'eccezione con l'apposita keyword "raise" a cui si aggiunge la classe di eccezione
 #che si vuole sollevare, come ad esempio l'eccezione di TypeError, ossia quella legata a ...
 #oppure l'eccezione ValueError, ossia quella legata a ...
@@ -19,7 +19,7 @@
 #la clausola finally in generale viene messa in esecuzione sia nel caso in cui
 #l'eccezione venga sollevata, che nel caso in cui essa non venga sollevata; funge
 #come blocco di codice di chiusura a valle dell'esecuzione ed ha delle casistiche di
-#utilizzo particolari: non è buono codificare con l'ordine try, finally, except,
+#utilizzo particolari: non e' buono codificare con l'ordine try, finally, except,
 #ma un try-except, che contiene un try-finally.
 
 #con il construtto with si ha l'unione del try-finally, codificandolo come:
@@ -39,8 +39,8 @@ def main():
         try:              #ci consente di intercettare l'eccezione sollevata
             my_number = input_poistive_number()
             print(f"{my_number}")                               
-            # dà un secondo errore di Unbound Local Error, perche la variabile viene referenziata
-            # prima del suo utilizzo, risolvibile spostando questo print sopra dato che posso già
+            # da' un secondo errore di Unbound Local Error, perche la variabile viene referenziata
+            # prima del suo utilizzo, risolvibile spostando questo print sopra dato che posso gia'
             # far comparire l'eccezione quando sto digitando e non dopo quando printo
             break #metto il break qui perche se io inserisco un numero positivo, allora non sollevo un'eccezione, quindi breako
         except ValueError as ex:                            #se avessi messo il break sotto...
