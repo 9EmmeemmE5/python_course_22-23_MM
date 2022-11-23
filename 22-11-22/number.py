@@ -21,7 +21,7 @@ class Number(): #eredita da object per assenza contenuto in parentesi
     def __repr__(self) -> str:
         """"""
         return f"[{self._number}]"
-    #con il repr vado a ... ed in debug console entra qui nel repr, restituendo la f.string 
+    #con il repr vado a convertire l'oggetto in stringa in debug console: entra qui nel repr, restituendo la f.string 
     def __str__(self):
         """"""
         return f"[{self._number}]"
