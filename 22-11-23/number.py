@@ -47,7 +47,7 @@ class Number(): #eredita da object per assenza contenuto in parentesi
         return f"[{self._number}]"
     #con il repr vado a convertire l'oggetto in stringa in debug console: entra qui nel repr, restituendo la f.string 
     def __str__(self):
-        """"""
+        """representation in terminal environment definition"""
         return f"[{self._number}]"
     #qui entro quando sono in terminale
 """Nuova lezione del 23-11-22 da qui"""
