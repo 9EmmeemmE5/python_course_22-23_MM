@@ -1,5 +1,5 @@
 """test sul controllo della classe numero"""
-from number import Number,ComplexNumber #non ha senso reinserire "from number import ComplexNumber"
+from number import Number,ComplexNumber as cn #non ha senso reinserire "from number import ComplexNumber"
 
 my_number = Number() #implicitamente sto richiamando il metodo init e, in assenza di attributi come nelle funzioni, richiama un'eccezione
 my_value= str(my_number)
@@ -12,9 +12,9 @@ my_number3 = my_number2 + my_number
 my_number4 = my_number2 + 4.0 #ritorna un eccezione di AttributeError perché nella classe float non esiste l'attributo 'getNumber', ma si può correggere con un isinstance()
 
 #complex number.. 0+4i
-my_complex_number=ComplexNumber(0.0, 4.0)
+my_complex_number=cn(0.0, 4.0)
 print(my_complex_number)
-my_complex_number2=ComplexNumber(imgPart=4.0) #si può fare anche in questo modo qui, come nel caso in cui si abbiano molti argomenti, dove apunto conviene specificare l'attributo da usare e lasciare di default gli altri
+my_complex_number2=cn(imgPart=4.0) #si può fare anche in questo modo qui, come nel caso in cui si abbiano molti argomenti, dove apunto conviene specificare l'attributo da usare e lasciare di default gli altri
 # print(my_complex_number2.getValue()) #va in errore perche non ho un attributo richiamato nelle parentesi di getValue()
 print(my_complex_number2.getValue("real"))
 print(my_complex_number2.getValue("img"))
