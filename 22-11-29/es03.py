@@ -21,6 +21,6 @@ print(result_scores)
 #filtraggio parole palindriome
 palindromi = ['demigod', 'rewire', 'anna', 'madam','freer','anuforajarofuna', 'radar']
 
-filtered_names = list(filter(lambda word: word==[::-1], palindromi)) #lambda che prende in ingresso l'elemento word della lista palindromi
+filtered_names = list(filter(lambda word: word==word[::-1], palindromi)) #lambda che prende in ingresso l'elemento word della lista palindromi
 
 print(filtered_names)
