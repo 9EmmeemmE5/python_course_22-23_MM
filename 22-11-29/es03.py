@@ -19,7 +19,7 @@ result_scores = list(filter(lambda x: x>=75, scores))
 print(result_scores)
 
 #filtraggio parole palindriome
-palindromi = ["demigod", 'rewire', 'anna', 'madam','freer','anuforajarofuna', 'radar']
+palindromi = ['demigod', 'rewire', 'anna', 'madam','freer','anuforajarofuna', 'radar']
 
 filtered_names = list(filter(lambda word: word==[::-1], palindromi)) #lambda che prende in ingresso l'elemento word della lista palindromi
 
