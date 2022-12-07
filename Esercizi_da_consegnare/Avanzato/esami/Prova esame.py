@@ -1,7 +1,7 @@
 import requests
 import json
 
-
+#TODO: chiedere al prof perche ha messo headers e payload
 url="https://s3.amazonaws.com/vrai.univpm/FI/2021/11/geodata_cdp.json"
 response=requests.get(url)
 my_dict=json.loads(response.text)
