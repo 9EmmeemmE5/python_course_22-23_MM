@@ -7,7 +7,9 @@ import matplotlib.pyplot as plt #ricorda sempre il pyplot
 
 def main():
     """Entry point for out application"""
-    img_defect_0 = cv.imread("22-12-06\\img\\DJI_0035.jpg")
+    PATH_IMG="22-12-06\\img\\"
+    FILE_NAME="DJI_0035.jpg"
+    img_defect_0 = cv.imread(f"{PATH_IMG}{FILE_NAME}")
     print(img_defect_0.shape, img_defect_0.dtype)
     channel_of_interest = img_defect_0[:,:,0] # estrae con gli operatori di broadcast ":" tutte le righe (primo :), tutte le colonne (secondo :) del canale numero 1 con indice 0
     roi_img = channel_of_interest[80:192, 50:205] #creo una roi manuale andando a leggere i valori dei pixel con il plot #! attenzione al sistema di riferimento per non far confusione con i valori x ed y dei punti presi sotto
@@ -29,7 +31,7 @@ def main():
     plt.show()
     
     #! Dalla doc di opencv con il metodo opencv+matplotlib
-    plt.hist(roi_img.ravel(),256,[0,256])
+    plt.hist(roi_img.ravel(),256,(0,256))
     plt.xlim([0,256])
     plt.show()
     

@@ -6,7 +6,7 @@ from read import read_img
 
 class test_read (unittest.TestCase):
     def test_read_img(self):
-        PATH_IMG = ".\\Esame\\immagini\\"
+        PATH_IMG = ".\\Esercizi_da_consegnare\\Esame_Forlano\\Esame\\immagini\\"
         NOME_ERR = "SSCF0336.jpg" # Con NOME_ERR il test deve essere positivo
         NOME_OK = "DSCF0336.jpg" # Con NOME_OK il test deve fallire
         with self.assertRaises(ValueError):

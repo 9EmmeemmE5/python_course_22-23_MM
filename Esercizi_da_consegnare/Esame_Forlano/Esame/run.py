@@ -21,11 +21,11 @@ from Moduli.plt import plt_img, plt_img_block
 
 def main():
     # Definisco il path del file di testo e leggo i nomi delle immagini con la funzione read_txt
-    PATH_FILE = ".\\Esame\\image.txt"
+    PATH_FILE = ".\\Esercizi_da_consegnare\\Esame_Forlano\\Esame\\image.txt"
     name_splitted = read.read_txt(PATH_FILE)
 
     # Definisco il path delle immagini
-    PATH_IMG = ".\\Esame\\Immagini"
+    PATH_IMG = ".\\Esercizi_da_consegnare\\Esame_Forlano\\Esame\\Immagini\\"
     # Ripeto il codice per tutte le immagini in name_splitted
     for item in name_splitted:
         print(f'Codice eseguito per: {item}')

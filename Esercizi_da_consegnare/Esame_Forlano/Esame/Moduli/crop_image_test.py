@@ -13,7 +13,7 @@ Andiamo a confrotnare l'array roi_img derivante dalla funzione con un array roi_
 '''
 class test_roi(unittest.TestCase):
     def test_roi(self):
-        PATH_IMG = ".\\Esame\\immagini\\DSCF0336.jpg"
+        PATH_IMG = ".\\Esercizi_da_consegnare\\Esame_Forlano\\Esame\\immagini\\DSCF0336.jpg"
         img = cv.imread(PATH_IMG, cv.IMREAD_GRAYSCALE)
 
         roi_img = roi(img) # Funzione da testare
