@@ -21,11 +21,11 @@ def read_int(str_x):
             # Verifico che l'input sia maggiore di zero
             if res >= 0:   
                 letto = True
+                return res
             else:
                 print("Il numero inserito deve essere maggiore di zero..")
         except ValueError: # Valore non appropriato
             print("Bisonga inserire un numero interno...")
-    return res
 
 
 def read_txt(PATH_FILE):

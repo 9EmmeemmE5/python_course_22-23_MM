@@ -143,7 +143,7 @@ def main():
 
         # Matrice F con dimenisone uguale alla roi_img inizilizzata con valore -1
         F = np.full((rows, cols), -1)
-
+        print(F)
         # Associo alla nuova immagine F l’identificatore del cluster DBSCAN
         i = 0 # Contatore
         for item in P:

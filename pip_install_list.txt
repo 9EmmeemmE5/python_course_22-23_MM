@@ -1,0 +1,9 @@
+virtualenv
+matplotlib
+numpy
+opencv-python
+pandas
+pylint
+qrcode
+scikit-learn
+scipy
