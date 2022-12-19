@@ -41,3 +41,19 @@ def roi(img):
     roi_img = img[start_y_pt:stop_y_pt ,start_x_pt:stop_x_pt] # Prima la y (righe) poi le x (colonne)
 
     return roi_img
+
+
+# if (x_alto_sinistra< x_basso_destra and\
+#             y_alto_sinistra < y_basso_destra and\
+#                 x_basso_destra < colonne and\
+#                 y_basso_destra < righe and\
+#                     x_alto_sinistra < colonne and\
+#                     y_alto_sinistra < righe):
+#                 print("Non si sono commessi errori nell'inserimento")
+#                 break
+#         else:
+#             print(f'Errore\
+#                 \n x_alto_sinistra deve essere < x_basso_destra\
+#                 \n y_alto_sinistra deve essere < y_basso_destra\
+#                 \n le x dei punti devono essere < di {colonne}\
+#                 \n le y dei punti devono essere < di {righe}')

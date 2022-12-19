@@ -1,11 +1,7 @@
 """Modulo che implementa le funzioni per la determinazione della regione di interesse"""
-#import unittest e rivedi pylint
-import matplotlib.pyplot as plt
-import cv2 as cv
+#import unittest
 
 from Moduli.operazioni_utente import inserimento_valori_numerici
-from Moduli.lettura_input import lettura_immagine
-from Moduli.plot_immagini import grafico_roi_auto
 
 def creazione_roi_manuale(immagine):
     """
@@ -13,39 +9,61 @@ def creazione_roi_manuale(immagine):
     Parametri in ingresso: immagine
     Parametri in uscita: immagine_roi
     """
+# ---------------------------------------------------------------------------------------------- #
+# Stampa del messaggio di istruzioni sulla digitazione dei valori per la creazione della bounding
+# box
+# ---------------------------------------------------------------------------------------------- #
     print("Ingresso nel metodo manuale della creazione della regione di interesse:\n\
 ricordando la logica di inserimento Top-Left e Bottom-Right, inserire manualmente\n\
 nell'ordine riportato le coordinate x ed y dei due punti della regione di interesse...\n")
+# ---------------------------------------------------------------------------------------------- #
+# Associazione della tuple di righe e colonne dell'immagine alle dimensioni della matrice
+# ---------------------------------------------------------------------------------------------- #
     (righe,colonne)=immagine.shape
+# ---------------------------------------------------------------------------------------------- #
+# Ciclo while di inserimento dei valori delle coordinate dei punti della bounding box
+# ---------------------------------------------------------------------------------------------- #
     while True:
         print(f"ATTENZIONE: valore massimo delle coordinate del pixel per le x è {colonne}\n\
-ATTENZIONE: valore massimo delle coordinate del pixel per le y è {righe}")
-        x_alto_sinistra=inserimento_valori_numerici("Inserire la x del punto in alto a sinistra\
+ATTENZIONE: valore massimo delle coordinate del pixel per le y è {righe}\n\
+ATTENZIONE: le coordinate del punto in alto a sinistra devono essere minori\n\
+            di quelle in basso a destra")
+# ---------------------------------------------------------------------------------------------- #
+# Inserimento dei valori continuativo ed in blocco fintanto che non viene verificata la logica
+# di inserimento della bounding box per la regione di interesse tramite la funzione di inserimento
+# dei valori interi
+# ---------------------------------------------------------------------------------------------- #
+        x_alto_sinistra=inserimento_valori_numerici("Inserire la x del punto in alto a sinistra \
 (ES:2000):\n")
-        y_alto_sinistra=inserimento_valori_numerici("Inserire la y del punto in alto a sinistra\
+        y_alto_sinistra=inserimento_valori_numerici("Inserire la y del punto in alto a sinistra \
 (ES:600):\n")
-        x_basso_destra=inserimento_valori_numerici("Inserire la x del punto in basso a destra\
+        x_basso_destra=inserimento_valori_numerici("Inserire la x del punto in basso a destra \
 (ES:2800):\n")
-        y_basso_destra=inserimento_valori_numerici("Inserire la y del punto in basso a destra\
+        y_basso_destra=inserimento_valori_numerici("Inserire la y del punto in basso a destra \
 (ES:800):\n")
-        coerenza_coordinata_x=x_alto_sinistra < x_basso_destra #type:ignore
-        coerenza_coordinata_y=y_alto_sinistra < y_basso_destra #type:ignore
-        coerenza_limite_colonne=x_basso_destra < colonne
-        coerenza_limite_righe=y_basso_destra < righe
-        condizioni=(coerenza_coordinata_x,coerenza_coordinata_y,\
-            coerenza_limite_colonne,coerenza_limite_righe)
-        errore_coord_x="Errore: x_alto_sinistra deve essere < x_basso_destra"
-        errore_coord_y="Errore: y_alto sinistra deve essere < y_basso destra"
-        errore_lim_righe=f"Errore: i punti x devono avere valore < di {colonne}"
-        errore_lim_colonne=f"Errore: i punti y devono avere valore < di {righe}"
-        condizioni_errate=(errore_coord_x,errore_coord_y,errore_lim_righe,errore_lim_colonne)
-        for element in condizioni:
-            for item in condizioni_errate:
-                if element is False:
-                    print(item)
-                elif element is True:
-                    print("Non si sono commessi errori nell'inserimento")
-                    break
-        immagine_roi_manuale=immagine[y_alto_sinistra:y_basso_destra,\
-        x_alto_sinistra:x_basso_destra]
-        return immagine_roi_manuale
+# ---------------------------------------------------------------------------------------------- #
+# Condizione di controllo della logica della bounding box: se si verifica allora esce dal ciclo
+# ---------------------------------------------------------------------------------------------- #
+        if (x_alto_sinistra < x_basso_destra and\
+            y_alto_sinistra < y_basso_destra and\
+                x_basso_destra < colonne and\
+                y_basso_destra < righe and\
+                    x_alto_sinistra < colonne and\
+                    y_alto_sinistra < righe):
+            print("Non si sono commessi errori nell'inserimento")
+            break
+# ---------------------------------------------------------------------------------------------- #
+# Altrimenti stampa un messaggio di errore ricordando la logica
+# ---------------------------------------------------------------------------------------------- #
+        else:
+            print(f'Errore:\n\
+                x_alto_sinistra deve essere < x_basso_destra\n\
+                y_alto_sinistra deve essere < y_basso_destra\n\
+                le x dei punti devono essere < di {colonne}\n\
+                le y dei punti devono essere < di {righe}')
+# ---------------------------------------------------------------------------------------------- #
+# Slicing della matrice relativa all'immagine di partenza con i valori della regione di interesse
+# ---------------------------------------------------------------------------------------------- #
+    immagine_roi_manuale=immagine[y_alto_sinistra:y_basso_destra,\
+    x_alto_sinistra:x_basso_destra]
+    return immagine_roi_manuale
